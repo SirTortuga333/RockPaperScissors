@@ -14,7 +14,7 @@ function getComputerChoice(){
 
 }
 
-function getHumanChoice(){
+/* function getHumanChoice(){
     // Get user input and validate
 
     let choice = prompt("Enter your choice: 'Rock' | 'Paper' | 'Scissors'");
@@ -27,10 +27,13 @@ function getHumanChoice(){
 
     return choice;
 
-}
+} */
 
 function playRound(HumanChoice, ComputeChoice){
     // Compare choices
+
+    const results = document.querySelector('.results');
+
 
     if(HumanChoice === 'ROCK'){
         if(ComputeChoice === 'SCISSORS'){
@@ -68,25 +71,35 @@ function playRound(HumanChoice, ComputeChoice){
     }
 }
 
-function playGame(){
+/* function playGame(){
 
-    for(let i = 0; i<5; i++){
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
 
-        playRound(humanSelection, computerSelection);
-    }
+    playRound(humanSelection, computerSelection);
 
     console.log("--- Scores ---");
     console.log("You: " + humanScore);
     console.log("Computer: " + computerScore);
     console.log("Ties: " + ties);
 
-}
+} */
+
+
+const container = document.querySelector(".container");
+
+container.addEventListener("click", (event) => {
+
+    let humanSelection = event.target.id;
+    humanSelection = humanSelection.toUpperCase();
+    const computerSelection = getComputerChoice();
+
+    playRound(humanSelection, computerSelection);
+});
 
 // Variables for tracking the score
 let humanScore = 0;
 let computerScore = 0;
 let ties = 0;
 
-playGame();
+// playGame();

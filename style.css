@@ -1,0 +1,72 @@
+/* style.css */
+body{
+    font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.results.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea todos los elementos al centro */
+    justify-content: space-around; /* Espacio uniforme entre elementos */
+    gap: 50px;
+}
+
+.point-counter {
+    display: flex; /* Esto permite que los hijos estén alineados en fila */
+    flex-direction: row; /* Asegura que los hijos estén en línea */
+    justify-content: center; /* Centra los hijos horizontalmente */
+    gap: 30px; /* Añade espacio entre los divs azules */
+    margin: auto;
+    flex-grow: 1;
+}
+
+#human, #computer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.round-result {
+    font-size: 36px;
+    text-align: center; /* Centra el texto si es necesario */
+}
+
+.win{
+    border-radius: 25px;
+    border-color: 5px green;
+}
+.lose{
+
+    border-radius: 25px;
+    border-color: 5px red;
+}
+
+
+button{
+    font-size: 24px;
+    border-radius: 25px;
+    border-color: 3px blue;
+    margin: 50px;
+    padding: 20px;
+}
+button:hover {
+    background-color: #04AA6D;
+    color: white;
+  }
+button > #rock{
+    margin-left: auto;
+}
+button > #scissors{
+    margin-right: auto;
+}
+
+#results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
