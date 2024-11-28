@@ -134,6 +134,16 @@ function playRound(HumanChoice, ComputeChoice){
         }
     }
 
+    if(computerScore == 5 || humanScore == 5){
+
+        if(humanScore == 5){
+            results.textContent = "You win! You reached 5 points first!";
+        } else {
+            results.textContent = "You Lose! The computer reached 5 points first!";
+        }
+
+    }
+
 }
 
 /* function playGame(){
